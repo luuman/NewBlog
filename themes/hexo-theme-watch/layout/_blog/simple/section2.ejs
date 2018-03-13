@@ -1,0 +1,56 @@
+<section class="page2">
+  <div class="grid-auto-wrapper">
+    <div class="article-wrap">
+     <div class="m-phone shadow"></div>
+     <div class="m-phone blog">
+      <header>
+       Latest Posts
+      </header>
+      <div class="post-cover f-img-light-wrap">
+       <a><img src="/img/blog/1452153380.png" alt="2016，新年来一发" /></a>
+      </div>
+      <div class="post-item">
+        <ul>
+          <% site.posts.map(function(post, index){ %>
+            <% if (index < 4){ %>
+              <li><a href="<%- url_for(post.path) %>" title="<%- post.date %>" class="f-toe" rel="title-tip"><%- post.title %></a></li>
+            <% } %>
+          <% }) %>
+        </ul>
+      </div>
+      <a class="button" href="http://luuman.github.io/">进入博客</a>
+     </div>
+    </div>
+    <div class="about-wrap">
+     <div class="inner">
+      <div class="m-about">
+       <h1>关于世平阜康</h1>
+       <p><%- config.description %></p>
+      </div>
+      <div class="m-time">
+       <div class="m-time-run" id="smohan-build-time">
+        <div class="line left"></div>
+        <div class="line right"></div>
+        <span><i></i></span>
+        <span><i></i></span>
+        <span><i></i></span>
+        <span><i></i></span>
+        <span><i></i></span>
+        <span><i></i></span>
+       </div>
+       <div class="m-time-run txt">
+        <span>年</span>
+        <span>个月</span>
+        <span>天</span>
+        <span>小时</span>
+        <span>分钟</span>
+        <span>秒</span>
+       </div>
+       <div class="m-time-start">
+        从<%=theme.time.index%>开始
+       </div>
+      </div>
+     </div>
+    </div>
+  </div>
+</section>

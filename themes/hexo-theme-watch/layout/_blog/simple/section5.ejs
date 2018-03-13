@@ -1,0 +1,31 @@
+<section class="page5">
+  <div class="grid-auto-wrapper">
+   <div class="m-link-wrap">
+    <div class="inner">
+     <div class="u-qr-code"></div>
+     <div class="links">
+      <!-- <ul>
+       <li><a href="http://blog.doyoe.com/" title="Doyoe's Blog" rel="title-tip" class="f-toe">Doyoe's Blog</a></li>
+       <li><a href="http://moxfive.xyz/" title="MOxFIVE's Blog" rel="title-tip" class="f-toe">MOxFIVE's Blog</a></li>
+       <li><a href="http://blog.dandyweng.com/" title="Dandy's Blog" rel="title-tip" class="f-toe">Dandy's Blog</a></li>
+       <li><a href="http://kayosite.com/" title="kayo's Blog" rel="title-tip" class="f-toe">kayo's Blog</a></li>
+       <li><a href="http://muo.me/" title="Muo's Blog" rel="title-tip" class="f-toe">Muo's Blog</a></li>
+       <li><a href="http://luuman.github.io/about/" class="f-toe">+ 申请链接</a></li>
+      </ul> -->
+      <%if(theme.friends && theme.friends.length != 0){%>
+        <ul class="search-ul">
+          <% for (var i in theme.friends){ %>
+            <li class="search-li">
+              <a href="<%- url_for(theme.friends[i]) %>" target="_blank" class="search-title"><i class="icon-quo-left icon"></i><%= i %></a>
+            </li>
+          <% } %>
+        </ul>
+      <%}%>
+     </div>
+     <div class="copyright">
+      Copyright © 2012-2016 Luuman. All Rights Reserved.
+     </div>
+    </div>
+   </div>
+  </div>
+</section>

@@ -1,0 +1,8 @@
+<div class="banner-canvas" style="position: absolute; z-index: 1;top: 0;left:0;">
+  <canvas id="canvas"></canvas>
+</div>
+<% if (theme.canvas.open){ %>
+  <script src="<%- config.root %>js/canvas/canvas-<%- Math.ceil(Math.random() * theme.canvas.canvas_max) %>.js"></script>
+<% } else { %>
+  <script src="<%- config.root %>js/canvas/canvas-<%- theme.canvas.canvas_type %>.js"></script>
+<% } %>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <% if (page.alone !== true){ %>
+	  <%- partial('_partial/head') %>
+  <% } else { %>
+	  <%- partial('_blog/head-blog') %>
+  <% } %>
+  <body>
+    <% if (page.alone !== true){ %>
+	    <%- partial('_partial/header') %>
+    <% } %>
+    <%- body %>
+    <% if (page.alone !== true){ %>
+	    <%- partial('_partial/top') %>
+	    <%- partial('_partial/footer') %>
+    <% } %>
+  </body>
+</html>
